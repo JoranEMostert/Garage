@@ -17,8 +17,11 @@
     </form>
 </section>
 <section>
-    <table>
-        <tr>
+
+    <input id='myInput' onkeyup='searchTable()' type='text'>
+
+    <table id="myTable">
+        <tr id="head">
             <th>ID</th>
             <th>Naam</th>
             <th>Adres</th>
@@ -61,5 +64,6 @@ END;
     </table>
 </section>
 <script src="javascript/raygell.js"></script>
+<script src="javascript/search.js"></script>
 </body>
 </html>
