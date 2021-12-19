@@ -8,7 +8,7 @@ function searchTable() {
         /*
             Deze for-loop loopt door alle cellen in een rij en pakt de innerText van elke cell,
             maar dit wordt dan een langere loop en is een beetje onnodig omdat je de inner-tekst
-            van de hele rij in een kéér kan pakken.
+            van de hele rij in één keer kan pakken.
 
             // td = tr[i].getElementsByTagName("td");
 
