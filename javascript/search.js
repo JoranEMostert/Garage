@@ -4,7 +4,6 @@ function searchTable() {
     filter = input.value.toUpperCase();
     table = document.getElementById("myTable");
     tr = table.getElementsByTagName("tr");
-
     for (i = 0; i < tr.length; i++) {
         /*
             Deze for-loop loopt door alle cellen in een rij en pakt de innerText van elke cell,
