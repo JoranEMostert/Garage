@@ -63,6 +63,50 @@ END;
         ?>
     </table>
 </section>
+<section>
+    <table id="myTable">
+        <tr id="head">
+            <th>ID</th>
+            <th>Naam</th>
+            <th>Adres</th>
+            <th>Postcode</th>
+            <th>Plaats</th>
+            <th></th>
+        </tr>
+        <?php
+        try {
+            $result = executeStatement("SELECT * FROM auto ORDER BY id");
+            if ($result->num_rows > 0) {
+                // output data of each row
+                while($row = $result->fetch_assoc()) {
+                    $id = htmlentities($row["id"]);
+                    $naam = htmlentities($row["naam"]);
+                    $adres = htmlentities($row["adres"]);
+                    $postcode = htmlentities($row["postcode"]);
+                    $plaats = htmlentities($row["plaats"]);
+                    echo<<<END
+        <tr id="$id">
+            <td>$id</td>
+            <td>$naam</td>
+            <td>$adres</td>
+            <td>$postcode</td>
+            <td>$plaats</td>
+            <td>
+                <button><i class="codicon codicon-pencil"></i></button>
+                <button><i class="codicon codicon-trash"></i></button>
+            </td>
+        </tr>
+END;
+                }
+            }
+        } catch (Exception $e) {
+            echo"je vader is behaard";
+        }
+
+
+        ?>
+    </table>
+</section>
 <script src="javascript/raygell.js"></script>
 <script src="javascript/search.js"></script>
 </body>
