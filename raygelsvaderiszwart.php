@@ -9,7 +9,7 @@
 </head>
 <body>
 <section>
-    <form action="user/Insert.php" method="post">
+    <form action="user/register.php" method="post">
         <label for="naam">Naam:</label><br>
         <input type="text" id="naam" name="naam" placeholder="Naam"><br>
         <label for="adres">Adres:</label><br>

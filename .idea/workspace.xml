@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f3f9c34-4a9d-4d01-b48c-bf183bc6a21e" name="Changes" comment="kk">
-      <change afterPath="$PROJECT_DIR$/raygelsvaderiszwart.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/register.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/update.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+    </list>
+    <list id="f70e2a37-9552-4799-af8a-e8ff602f2d40" name="Changes by rayge" comment="">
       <change beforePath="$PROJECT_DIR$/javascript/raygell.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/raygell.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/user/delete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/user/Insert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/user/update.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,9 +40,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/user" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -72,7 +73,7 @@
       <workItem from="1639925279168" duration="68000" />
       <workItem from="1640159628670" duration="1618000" />
       <workItem from="1640166283327" duration="1270000" />
-      <workItem from="1640174184263" duration="10309000" />
+      <workItem from="1640174184263" duration="13388000" />
     </task>
     <task id="LOCAL-00001" summary="kk">
       <created>1639518770370</created>
@@ -95,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640161668725</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="kk">
+      <created>1640185262220</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1640185262220</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
