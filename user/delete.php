@@ -1,11 +1,15 @@
 <?php
     include"../db.php";
 
+
     if(isset($_GET['id']) && is_numeric($_GET['id'])) {
-        try {
-            executeStatement("DELETE FROM klant WHERE id = ?","i", $_GET['id']);
+        $id = $_GET['id'];
+    $stmt = $conn->prepare("DELETE FROM klant WHERE id=?");
+    $stmt->bind_param("i", $id);
+        if($stmt->execute()) {
             http_response_code(200);
-        }catch(Exception $e){
+        }else{
             http_response_code(500);
         }
     } else http_response_code(400);
+

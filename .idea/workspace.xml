@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f3f9c34-4a9d-4d01-b48c-bf183bc6a21e" name="Changes" comment="kk">
+      <change afterPath="$PROJECT_DIR$/raygelsvaderiszwart.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/raygell.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/raygell.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/user/delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/user/Insert.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/user/update.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +32,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="21xWW5msxtMIdIfareTuClpsJ9A" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -35,6 +44,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/user" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -42,6 +52,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Joran\source\vscode projects\Garage\user" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -57,6 +72,7 @@
       <workItem from="1639925279168" duration="68000" />
       <workItem from="1640159628670" duration="1618000" />
       <workItem from="1640166283327" duration="1270000" />
+      <workItem from="1640174184263" duration="10309000" />
     </task>
     <task id="LOCAL-00001" summary="kk">
       <created>1639518770370</created>
@@ -95,7 +111,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="kk" />

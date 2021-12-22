@@ -11,7 +11,11 @@ document.querySelectorAll("tr[id]").forEach(tr => {
     })
 
     let isEditing = false;
-    editButton.addEventListener("click",() => {
+    editButton.addEventListener("click",async () => {
+        let naam=tr.querySelector('td:nth-of-type(1)').innerText;
+        let adres=tr.querySelector('td:nth-of-type(2)').innerText;
+        let postcode=tr.querySelector('td:nth-of-type(3)').innerText;
+        let plaats=tr.querySelector('td:nth-of-type(4)').innerText;
         if(!isEditing) {
             tr.querySelectorAll("td:not(:last-of-type):not(:first-of-type)").forEach(td => {
                 td.setAttribute("contenteditable", "true")
@@ -28,9 +32,24 @@ document.querySelectorAll("tr[id]").forEach(tr => {
 
             editButton.querySelector("i").classList.add("codicon-pencil");
             editButton.querySelector("i").classList.remove("codicon-save-as");
-            isEditing=false;
-            //
-        }
+            isEditing = false;
+
+            let formdata = new FormData();
+            formdata.set('naam', tr.querySelector('td:nth-of-type(1)').innerText);
+            formdata.set('adres', tr.querySelector('td:nth-of-type(2)').innerText);
+            formdata.set('postcode', tr.querySelector('td:nth-of-type(3)').innerText);
+            formdata.set('plaats', tr.querySelector('td:nth-of-type(4)').innerText);
+            let res = await fetch(`user/update.php?id=${tr.getAttribute("id")}`, {
+                body: formdata,
+                method: 'POST'
+            });
+            if (res.status !== 200){
+                tr.querySelector('td:nth-of-type(1)').innerText = naam;
+                tr.querySelector('td:nth-of-type(2)').innerText = adres;
+                tr.querySelector('td:nth-of-type(3)').innerText= postcode;
+                tr.querySelector('td:nth-of-type(4)').innerText = plaats;
+            }
+                 }
     })
 
 })
