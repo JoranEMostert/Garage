@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f3f9c34-4a9d-4d01-b48c-bf183bc6a21e" name="Changes" comment="kk">
-      <change afterPath="$PROJECT_DIR$/user/register.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/update.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
-    <list id="f70e2a37-9552-4799-af8a-e8ff602f2d40" name="Changes by rayge" comment="">
-      <change beforePath="$PROJECT_DIR$/javascript/raygell.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/raygell.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/user/delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +68,11 @@
       <workItem from="1639925279168" duration="68000" />
       <workItem from="1640159628670" duration="1618000" />
       <workItem from="1640166283327" duration="1270000" />
-      <workItem from="1640174184263" duration="13388000" />
+      <workItem from="1640174184263" duration="14156000" />
+      <workItem from="1640208168264" duration="420000" />
+      <workItem from="1641481974237" duration="726000" />
+      <workItem from="1641986301978" duration="1517000" />
+      <workItem from="1642073308014" duration="1286000" />
     </task>
     <task id="LOCAL-00001" summary="kk">
       <created>1639518770370</created>
@@ -103,7 +102,21 @@
       <option name="project" value="LOCAL" />
       <updated>1640185262220</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="kk">
+      <created>1640188094778</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1640188094778</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Changes by rayge">
+      <created>1640188127602</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1640188127602</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,7 +135,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="kk" />
-    <option name="LAST_COMMIT_MESSAGE" value="kk" />
+    <MESSAGE value="Changes by rayge" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by rayge" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

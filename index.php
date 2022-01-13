@@ -52,6 +52,48 @@ END;
         ?>
     </table>
 </section>
+<section>
+    <input id='myInput' onkeyup='searchTable()' type='text'>
+    <a href="raygelsvaderiszwart.php">Register</a>
+    <table id="myTable">
+        <tr>
+            <th>autoid</th>
+            <th>klantid</th>
+            <th>kenteken</th>
+            <th>merk</th>
+            <th>type</th>
+            <th>kmstand</th>
+            <th></th>
+        </tr>
+        <?php
+        $result = $conn->query("SELECT * FROM auto ORDER BY autoID");
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while($row = $result->fetch_assoc()) {
+                $autoID = htmlentities($row["autoID"]);
+                $klantid = htmlentities($row["klantid"]);
+                $kenteken = htmlentities($row["kenteken"]);
+                $merk = htmlentities($row["merk"]);
+                $type = htmlentities($row["type"]);
+                $kmstand = htmlentities($row["kmstand"]);
+                echo<<<END
+        <tr id="$id">
+            <td>$autoID</td>
+            <td>$klantid</td>
+            <td>$merk</td>
+            <td>$type</td>
+            <td>$kmstand</td>
+            <td>
+                <button><i class="codicon codicon-pencil"></i></button>
+                <button><i class="codicon codicon-trash"></i></button>
+            </td>
+        </tr>
+END;
+            }
+        }
+        ?>
+    </table>
+</section>
 <script src="javascript/raygell.js"></script>
 <script src="javascript/search.js"></script>
 </body>
