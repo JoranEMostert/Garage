@@ -12,7 +12,6 @@
         $stmt->bind_param("ssssi", $naam, $adres, $postcode, $plaats, $id);
         if($stmt->execute()) http_response_code(200);
         else {
-            http_response_code(500);
-            exit($stmt->error);
+            header('Location: /error.php?code=500');
         }
-    } else http_response_code(400);
+    } else header('Location: /error.php?code=500');

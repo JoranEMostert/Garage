@@ -13,11 +13,5 @@
         if($stmt->execute()) {
             http_response_code(200);
             header("Location: /");
-        } else {
-            http_response_code(500);
-            header("Location: /raygelsvaderiszwart");
-        }
-    } else {
-        http_response_code(400);
-        header("Location: /raygelsvaderiszwart");
-    }
+        } else header('Location: /error.php?code=500');
+    } else header('Location: /error.php?code=400');
