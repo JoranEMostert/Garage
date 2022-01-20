@@ -26,15 +26,16 @@
         </tr>
         <?php
             $result = $conn->query("SELECT * FROM klant ORDER BY id");
-            if ($result->num_rows > 0) {
-                // output data of each row
-                while($row = $result->fetch_assoc()) {
-                    $id = htmlentities($row["id"]);
-                    $naam = htmlentities($row["naam"]);
-                    $adres = htmlentities($row["adres"]);
-                    $postcode = htmlentities($row["postcode"]);
-                    $plaats = htmlentities($row["plaats"]);
-                    echo<<<END
+            if($result !== false) {
+                if ($result->num_rows > 0) {
+                    // output data of each row
+                    while($row = $result->fetch_assoc()) {
+                        $id = htmlentities($row["id"]);
+                        $naam = htmlentities($row["naam"]);
+                        $adres = htmlentities($row["adres"]);
+                        $postcode = htmlentities($row["postcode"]);
+                        $plaats = htmlentities($row["plaats"]);
+                        echo<<<END
         <tr id="$id">
             <td>$id</td>
             <td>$naam</td>
@@ -47,7 +48,10 @@
             </td>
         </tr>
 END;
+                    }
                 }
+            } else {
+                echo "Error: {$conn->error}";
             }
         ?>
     </table>
