@@ -8,10 +8,9 @@
         $postcode = $_POST['postcode'];
         $plaats = $_POST['plaats'];
 
+        global $conn;
         $stmt = $conn->prepare("INSERT INTO klant VALUES (?, ?, ?, ?, ?)");
         $stmt->bind_param("sssss", $id, $naam, $adres, $postcode, $plaats);
-        if($stmt->execute()) {
-            http_response_code(200);
-            header("Location: /");
-        } else header('Location: /error.php?code=500');
+        if($stmt->execute()) header("Location: /");
+        else header('Location: /error.php?code=500');
     } else header('Location: /error.php?code=400');

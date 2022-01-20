@@ -4,19 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f3f9c34-4a9d-4d01-b48c-bf183bc6a21e" name="Changes" comment="kk">
-      <change afterPath="$PROJECT_DIR$/.gitignore.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/error.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobileauto/delete.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobileauto/register.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobileauto/update.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/raygelsmoederiszwart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="1f3f9c34-4a9d-4d01-b48c-bf183bc6a21e" name="Changes" comment="Automatisch tabellen creëren">
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aindex.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Garage.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Garage.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connect.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobileauto/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/mobileauto/delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobileauto/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/mobileauto/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobileauto/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/mobileauto/update.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/user/delete.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/user/register.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/user/update.php" afterDir="false" />
@@ -52,9 +51,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -92,6 +93,10 @@
       <workItem from="1641986301978" duration="1517000" />
       <workItem from="1642073308014" duration="1286000" />
       <workItem from="1642499004375" duration="6012000" />
+      <workItem from="1642670856240" duration="2860000" />
+      <workItem from="1642674142545" duration="372000" />
+      <workItem from="1642676250382" duration="3399000" />
+      <workItem from="1642680332460" duration="11627000" />
     </task>
     <task id="LOCAL-00001" summary="kk">
       <created>1639518770370</created>
@@ -135,7 +140,21 @@
       <option name="project" value="LOCAL" />
       <updated>1640188127602</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Show error">
+      <created>1642671819631</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1642671819631</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Automatisch tabellen creëren">
+      <created>1642671871116</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1642671871116</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,7 +176,9 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="kk" />
     <MESSAGE value="Changes by rayge" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by rayge" />
+    <MESSAGE value="Show error" />
+    <MESSAGE value="Automatisch tabellen creëren" />
+    <option name="LAST_COMMIT_MESSAGE" value="Automatisch tabellen creëren" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

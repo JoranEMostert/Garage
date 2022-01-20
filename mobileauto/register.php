@@ -11,9 +11,7 @@
 
         global $conn;
         $stmt = $conn->prepare("INSERT INTO auto VALUES (?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("ssssss", $id, $kenteken, $klantid, $merk, $type, $kmstand);
-        if($stmt->execute()) {
-            http_response_code(200);
-            header("Location: /");
-        } else header('Location: /error.php?code=500');
+        $stmt->bind_param("sisssi", $id, $klantid, $kenteken, $merk, $type, $kmstand);
+        if($stmt->execute()) header("Location: /");
+        else header('Location: /error.php?code=500');
     } else header('Location: /error.php?code=400');
