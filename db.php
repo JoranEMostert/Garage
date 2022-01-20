@@ -13,34 +13,6 @@
        die("Connection failed: " . $conn->connect_error);
    }
 
-
-
-// /**
-// * @throws Exception
-// */
-// function executeStatement(string $query, string $types = null, &...$values) {
-//        global $conn;
-//        $stmt = $conn->prepare($query);
-
-//        if($types !== null) {
-//            $finalTypes = "";
-//            $finalValues = [];
-
-//            $i = 0;
-//            foreach(str_split($types) as $type) {
-//                if(in_array($type, ["s", "b", "i"])) {
-//                    if(isset($values[$i])) {
-//                        $finalTypes .= $type;
-//                        array_push($finalValues, $values[$i]);
-//                    } else throw new RuntimeException("Not enough values provided");
-//                } else throw new RuntimeException("Invalid type provided '{$type}'");
-//                $i++;
-//            }
-//            if(strlen($finalTypes) > 0) $stmt->bind_param($finalTypes, ...$finalValues);
-//        }
-
-//        if($stmt->execute()) return $stmt->get_result();
-//        else throw new Exception("SQL Error: {$stmt->error}");
-//    }
-
-//    executeStatement("DELETE FROM klant WHERE id = ?", "i", 1)
+   // create tables
+   $conn->query("CREATE TABLE IF NOT EXISTS `klant` ( `id` INT NOT NULL AUTO_INCREMENT , `naam` VARCHAR(255) NOT NULL , `adres` VARCHAR(255) NOT NULL , `postcode` VARCHAR(6) NOT NULL , `plaats` VARCHAR(255) NOT NULL , PRIMARY KEY (`id`))");
+   $conn->query("CREATE TABLE IF NOT EXISTS `auto` ( `autoID` INT NOT NULL AUTO_INCREMENT , `klantid` INT NOT NULL , `kenteken` VARCHAR(8) NOT NULL , `merk` VARCHAR(255) NOT NULL , `type` VARCHAR(255) NOT NULL , `kmstand` INT NOT NULL , PRIMARY KEY (`autoID`))");
