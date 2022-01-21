@@ -4,21 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f3f9c34-4a9d-4d01-b48c-bf183bc6a21e" name="Changes" comment="Automatisch tabellen creëren">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aindex.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="1f3f9c34-4a9d-4d01-b48c-bf183bc6a21e" name="Changes" comment="Front end en paar backend aanpassingen">
       <change beforePath="$PROJECT_DIR$/.idea/Garage.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Garage.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobileauto/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/mobileauto/delete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobileauto/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/mobileauto/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobileauto/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/mobileauto/update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/user/delete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/user/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/user/update.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +87,8 @@
       <workItem from="1642670856240" duration="2860000" />
       <workItem from="1642674142545" duration="372000" />
       <workItem from="1642676250382" duration="3399000" />
-      <workItem from="1642680332460" duration="11627000" />
+      <workItem from="1642680332460" duration="12277000" />
+      <workItem from="1642775069222" duration="2099000" />
     </task>
     <task id="LOCAL-00001" summary="kk">
       <created>1639518770370</created>
@@ -154,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642671871116</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Front end en paar backend aanpassingen">
+      <created>1642722089104</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1642722089104</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,7 +177,8 @@
     <MESSAGE value="Changes by rayge" />
     <MESSAGE value="Show error" />
     <MESSAGE value="Automatisch tabellen creëren" />
-    <option name="LAST_COMMIT_MESSAGE" value="Automatisch tabellen creëren" />
+    <MESSAGE value="Front end en paar backend aanpassingen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Front end en paar backend aanpassingen" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

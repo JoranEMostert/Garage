@@ -18,11 +18,14 @@
         <main class="flex-shrink-0">
             <div class="container">
                 <div class="container mt-5">
-                    <div class="row">
-                        <div class="col-sm">
-                            <p class="fw-bold text-left">Klanten</p>
+                    <div class="row mb-3">
+                        <div class="col-sm d-flex align-items-center">
+                            <p class="fw-bold text-left mb-0">Klanten</p>
                         </div>
-                        <div class="col-sm" style="text-align: right">
+                        <div class="col-sm">
+                            <input type="text" class="form-control" id="searchKlant" placeholder="Zoeken naar klanten...">
+                        </div>
+                        <div class="col-sm d-flex align-items-center justify-content-end">
                             <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#createKlant">Nieuwe Klant</button>
                         </div>
                     </div>
@@ -82,11 +85,14 @@
             </div>
             <div class="container">
                 <div class="container mt-5">
-                    <div class="row">
-                        <div class="col-sm">
-                            <p class="fw-bold text-left">Auto</p>
+                    <div class="row mb-3">
+                        <div class="col-sm d-flex align-items-center">
+                            <p class="fw-bold text-left">Auto's</p>
                         </div>
-                        <div class="col-sm" style="text-align: right">
+                        <div class="col-sm">
+                            <input type="text" class="form-control" id="searchAuto" placeholder="Zoeken naar auto's...">
+                        </div>
+                        <div class="col-sm d-flex align-items-center justify-content-end">
                             <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#createAuto">Nieuwe Auto</button>
                         </div>
                     </div>
@@ -308,6 +314,7 @@
 
         <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.5.3"></script>
         <script>
             $("div.modal#editKlant").on("show.bs.modal", e => {
                 const   button = e.relatedTarget,
@@ -326,12 +333,9 @@
             $("div.modal#editAuto").on("show.bs.modal", e => {
                 const   button = e.relatedTarget,
                     modal = e.target,
-                    tr = button.parentElement.parentElement,
-                    id = tr.id;
+                    tr = button.parentElement.parentElement;
 
-                console.log(id);
-
-                modal.querySelector('input[name="autoID"]').value = id;
+                modal.querySelector('input[name="autoID"]').value = tr.id;
                 modal.querySelector('input[name="kenteken"]').value = tr.querySelector("td:nth-of-type(1)").innerText;
 
                 [...modal.querySelectorAll('select > option[selected]')].forEach(option => option.removeAttribute("selected"));
@@ -361,7 +365,47 @@
                         console.error(err);
                     })
                 }
-            })
+            });
+
+            {
+                // search klant
+                const fuse = new Fuse([...document.querySelectorAll("table#klant tr[id]")].map(e => {
+                    return {
+                        element: e,
+                        values: [...e.children].map(el => el.innerText.replaceAll(/\s{2,}/g, " ").trim()).filter(a => a.length > 0)
+                    }
+                }), {keys: ["values"]});
+                const searchInput = document.querySelector("input#searchKlant");
+                const tbody = document.querySelector("table#klant > tbody");
+                const search = () => {
+                    const query = searchInput.value.replaceAll(/\s{2,}/g, " ").trim();
+                    if(query.length > 0) {
+                        [...document.querySelectorAll("table#klant tr[id]")].forEach(el => el.remove());
+                        fuse.search(query).forEach(res => tbody.append(res.item.element));
+                    } else fuse._docs.forEach(el => tbody.append(el.element));
+                };
+                ["change", "keydown", "keyup", "input"].forEach(event => searchInput.addEventListener(event, e => search()));
+            }
+
+            {
+                // search klant
+                const fuse = new Fuse([...document.querySelectorAll("table#auto tr[id]")].map(e => {
+                    return {
+                        element: e,
+                        values: [...e.children].map(el => el.innerText.replaceAll(/\s{2,}/g, " ").trim()).filter(a => a.length > 0)
+                    }
+                }), {keys: ["values"]});
+                const searchInput = document.querySelector("input#searchAuto");
+                const tbody = document.querySelector("table#auto > tbody");
+                const search = () => {
+                    const query = searchInput.value.replaceAll(/\s{2,}/g, " ").trim();
+                    if(query.length > 0) {
+                        [...document.querySelectorAll("table#auto tr[id]")].forEach(el => el.remove());
+                        fuse.search(query).forEach(res => tbody.append(res.item.element));
+                    } else fuse._docs.forEach(el => tbody.append(el.element));
+                };
+                ["change", "keydown", "keyup", "input"].forEach(event => searchInput.addEventListener(event, e => search()));
+            }
         </script>
     </body>
 </html>
