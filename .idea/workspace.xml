@@ -4,12 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f3f9c34-4a9d-4d01-b48c-bf183bc6a21e" name="Changes" comment="Front end en paar backend aanpassingen">
-      <change beforePath="$PROJECT_DIR$/.idea/Garage.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Garage.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+    <list default="true" id="1f3f9c34-4a9d-4d01-b48c-bf183bc6a21e" name="Changes" comment="Search bar toegevoegd en functionaliteit">
+      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scrumboard/20220119_170907.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scrumboard/20220119_171031.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scrumboard/20220119_171104.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aindex.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/raygell.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/raygelsmoederiszwart.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/raygelsvaderiszwart.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/style.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +70,9 @@
       <recent name="C:\Users\gebruiker\PhpstormProjects\Garage" />
       <recent name="C:\Users\Joran\source\vscode projects\Garage\user" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rayge\Documents\Projects\PHP\Garage\scrumboard" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -88,7 +98,7 @@
       <workItem from="1642674142545" duration="372000" />
       <workItem from="1642676250382" duration="3399000" />
       <workItem from="1642680332460" duration="12277000" />
-      <workItem from="1642775069222" duration="2099000" />
+      <workItem from="1642775069222" duration="3337000" />
     </task>
     <task id="LOCAL-00001" summary="kk">
       <created>1639518770370</created>
@@ -153,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642722089104</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Search bar toegevoegd en functionaliteit">
+      <created>1642777498483</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1642777498483</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,7 +195,8 @@
     <MESSAGE value="Show error" />
     <MESSAGE value="Automatisch tabellen creëren" />
     <MESSAGE value="Front end en paar backend aanpassingen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Front end en paar backend aanpassingen" />
+    <MESSAGE value="Search bar toegevoegd en functionaliteit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Search bar toegevoegd en functionaliteit" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
