@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f3f9c34-4a9d-4d01-b48c-bf183bc6a21e" name="Changes" comment="Search bar toegevoegd en functionaliteit">
-      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrumboard/20220119_170907.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrumboard/20220119_171031.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrumboard/20220119_171104.jpg" afterDir="false" />
+    <list default="true" id="1f3f9c34-4a9d-4d01-b48c-bf183bc6a21e" name="Changes" comment="Final Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aindex.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/raygell.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/search.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/raygelsmoederiszwart.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/raygelsvaderiszwart.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/style.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/db.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +88,8 @@
       <workItem from="1642674142545" duration="372000" />
       <workItem from="1642676250382" duration="3399000" />
       <workItem from="1642680332460" duration="12277000" />
-      <workItem from="1642775069222" duration="3337000" />
+      <workItem from="1642775069222" duration="3627000" />
+      <workItem from="1643102641334" duration="1525000" />
     </task>
     <task id="LOCAL-00001" summary="kk">
       <created>1639518770370</created>
@@ -170,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642777498483</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Final Commit">
+      <created>1642778445650</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1642778445650</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,7 +194,8 @@
     <MESSAGE value="Automatisch tabellen creëren" />
     <MESSAGE value="Front end en paar backend aanpassingen" />
     <MESSAGE value="Search bar toegevoegd en functionaliteit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Search bar toegevoegd en functionaliteit" />
+    <MESSAGE value="Final Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final Commit" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
