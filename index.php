@@ -14,10 +14,11 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vscode-codicons@0.0.17/dist/codicon.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     </head>
-    <body class="d-flex flex-column h-100">
+    <body class="d-flex flex-column h-100 bg-light">
         <main class="flex-shrink-0">
             <div class="container">
                 <div class="container mt-5">
+                    <p class="mb-3">GitHub: <a href="https://github.com/JoranEMostert/Garage">https://github.com/JoranEMostert/Garage</a></p>
                     <div class="row mb-3">
                         <div class="col-sm d-flex align-items-center">
                             <p class="fw-bold text-left mb-0">Klanten</p>
@@ -70,7 +71,7 @@
                 <td>$plaats</td>
                 <td>
                     <button type="button" data-action="edit" class="btn btn-primary btn-sm" style="aspect-ratio: 1/1;display: inline-block;align-items: center" data-bs-toggle="modal" data-bs-target="#editKlant"><i class="codicon codicon-pencil"></i></button>
-                    <button type="button" data-action="delete" class="btn btn-danger btn-sm" style="aspect-ratio: 1/1;display: inline-block;align-items: center"><i class="codicon codicon-trash"></i></button>
+                    <button type="button" onclick="deleteKlant({$id})" class="btn btn-danger btn-sm" style="aspect-ratio: 1/1;display: inline-block;align-items: center"><i class="codicon codicon-trash"></i></button>
                 </td>
             </tr>
     END;
@@ -93,7 +94,15 @@
                             <input type="text" class="form-control" id="searchAuto" placeholder="Zoeken naar auto's...">
                         </div>
                         <div class="col-sm d-flex align-items-center justify-content-end">
-                            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#createAuto">Nieuwe Auto</button>
+                            <?php
+                                $res = $conn->query("SELECT COUNT(*) FROM `klant`");
+                                if($res !== false && $res->num_rows > 0) {
+                                    $row = $res->fetch_assoc();
+                                    if($row['COUNT(*)'] > 0) {
+                                        echo '<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#createAuto">Nieuwe Auto</button>';
+                                    }
+                                }
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -141,7 +150,7 @@
                 <td>$kmstand</td>
                 <td>
                     <button type="button" class="btn btn-primary btn-sm" style="aspect-ratio: 1/1;display: inline-block;align-items: center" data-bs-toggle="modal" data-bs-target="#editAuto"><i class="codicon codicon-pencil"></i></button>
-                    <button type="button" data-action="delete" class="btn btn-danger btn-sm" style="aspect-ratio: 1/1;display: inline-block;align-items: center"><i class="codicon codicon-trash"></i></button>
+                    <button type="button" onclick="deleteAuto({$autoID})" class="btn btn-danger btn-sm" style="aspect-ratio: 1/1;display: inline-block;align-items: center"><i class="codicon codicon-trash"></i></button>
                 </td>
             </tr>
     END;
@@ -236,7 +245,7 @@
                                         if($res !== false && $res->num_rows > 0) {
                                             $a = 0;
                                             while($row = $res->fetch_assoc()) {
-                                                echo "<option value='{$row['id']}'>{$row['naam']}</option>";
+                                                echo "<option value='{$row['id']}'>".htmlentities($row['naam'])."</option>";
                                                 $a++;
                                             }
                                         }
@@ -283,7 +292,7 @@
                                         if($res !== false && $res->num_rows > 0) {
                                             $a = 0;
                                             while($row = $res->fetch_assoc()) {
-                                                echo "<option value='{$row['id']}'>{$row['naam']}</option>";
+                                                echo "<option value='{$row['id']}'>".htmlentities($row['naam'])."</option>";
                                                 $a++;
                                             }
                                         }
@@ -316,6 +325,25 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.5.3"></script>
         <script>
+
+            function deleteAuto(id) {
+                fetch(`/mobileauto/delete.php?id=${id}`).then(res => {
+                    if(res.status === 200) window.location.reload();
+                    else window.location.href = `/error.php?code=${res.status}`;
+                }).then(err => {
+                    console.error(err);
+                })
+            }
+
+            function deleteKlant(id) {
+                fetch(`/user/delete.php?id=${id}`).then(res => {
+                    if(res.status === 200) window.location.reload();
+                    else window.location.href = `/error.php?code=${res.status}`;
+                }).then(err => {
+                    console.error(err);
+                })
+            }
+
             $("div.modal#editKlant").on("show.bs.modal", e => {
                 const   button = e.relatedTarget,
                     modal = e.target,
@@ -347,25 +375,25 @@
                 modal.querySelector('input[name="kmstand"]').value = tr.querySelector("td:nth-of-type(5)").innerText;
             })
 
-            window.addEventListener("click", e => {
-                if(e.target.matches('table#klant tr[id] button[data-action="delete"]')) {
-                    const id = e.target.parentElement.parentElement.id;
-                    fetch(`/user/delete.php?id=${id}`).then(res => {
-                        if(res.status === 200) window.location.reload();
-                        else window.location.href = `/error.php?code=${res.status}`;
-                    }).then(err => {
-                        console.error(err);
-                    })
-                } else if(e.target.matches('table#auto tr[id] button[data-action="delete"]')) {
-                    const id = e.target.parentElement.parentElement.id;
-                    fetch(`/mobileauto/delete.php?id=${id}`).then(res => {
-                        if(res.status === 200) window.location.reload();
-                        else window.location.href = `/error.php?code=${res.status}`;
-                    }).then(err => {
-                        console.error(err);
-                    })
-                }
-            });
+            // window.addEventListener("click", e => {
+            //     if(e.target.matches('table#klant tr[id] button[data-action="delete"]')) {
+            //         const id = e.target.parentElement.parentElement.id;
+            //         fetch(`/user/delete.php?id=${id}`).then(res => {
+            //             if(res.status === 200) window.location.reload();
+            //             else window.location.href = `/error.php?code=${res.status}`;
+            //         }).then(err => {
+            //             console.error(err);
+            //         })
+            //     } else if(e.target.matches('table#auto tr[id] button[data-action="delete"]')) {
+            //         const id = e.target.parentElement.parentElement.id;
+            //         fetch(`/mobileauto/delete.php?id=${id}`).then(res => {
+            //             if(res.status === 200) window.location.reload();
+            //             else window.location.href = `/error.php?code=${res.status}`;
+            //         }).then(err => {
+            //             console.error(err);
+            //         })
+            //     }
+            // });
 
             {
                 // search klant
